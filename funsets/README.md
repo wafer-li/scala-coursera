@@ -127,9 +127,9 @@ Therefore, we can implement the `exists()` as follow:
 def exists(s: Set, p: Int => Boolean) = !forAll(s, (e) => !p(e))
 ```
 
-> There is another thing need to be noticed:
-> What is the param of `p`? (`p` is a funciton takes `Int` and return `Boolean`)
-> Actually, the param of `p` is **the element of the set**
+> There is another thing need to be noticed:  
+> What is the param of `p`? (`p` is a funciton takes `Int` and return `Boolean`)  
+> Actually, the param of `p` is **the element of the set**  
 
 But it is not simplified as possible.
 
