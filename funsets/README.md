@@ -47,19 +47,19 @@ After having the background knowleage, we can now implement our basic set functi
 
 1. `contains()`
 
-    > Since we use the `contains()` function itself as the character funtion of the set
-    > The `constains()` funcion will just call the set itself is sufficient
+    > Since we use the `contains()` function itself as the character funtion of the set  
+    > The `constains()` funcion will just call the set itself is sufficient  
 
 2. `union()`
 
-    > The union of two sets, is a set that contains the element of **either** two set
+    > The union of two sets, is a set that contains the element of **either** two set  
 
 3. `intersect()`
 
-    > The intersect of twoe set, is a set that contain the element of **both** two set
+    > The intersect of twoe set, is a set that contain the element of **both** two set  
 4. `diff()`
 
-    > The diff of two set, is a set that which element is belong to one set but not belong to the other
+    > The diff of two set, is a set that which element is belong to one set but not belong to the other  
 
 Those function is easy to implement just using the character funcion itself.
 
