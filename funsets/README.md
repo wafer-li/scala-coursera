@@ -135,7 +135,7 @@ But it is not simplified as possible.
 
 As I mentioned above, the `p` has **the same type of `s`**,
 
-therefore, we can think furtthe her:
+therefore, we can think further:
 
 **All the element in the set satisfy the negation of the predicate**
 
