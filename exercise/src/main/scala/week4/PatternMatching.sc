@@ -32,3 +32,4 @@ Sum(Number(1), Number(2)).eval
 Sum(Number(1), Number(2)).show
 
 Prod(Sum(Number(1), Number(2)), Var("x")).show
+Sum(Prod(Number(1), Number(2)), Var("x")).show
