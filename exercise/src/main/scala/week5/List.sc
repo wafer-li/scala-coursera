@@ -28,3 +28,11 @@ reverse(List(0,1,2,3,4,5,6,7,8))
 def removeAt[T](n: Int, xs: List[T]): List[T] = (xs take n) ++ (xs drop n + 1)
 
 removeAt(1, List(0, 1, 2, 3))
+
+def flatten(xs: List[Any]): List[Any] = xs match {
+  case Nil => Nil
+  case (head: List[_]) :: tail => flatten(head) ++ flatten(tail)
+  case head :: tail => head :: flatten(tail)
+}
+
+flatten(List(List(1, 1), 2, List(3, List(5, 8))))
