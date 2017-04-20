@@ -1,0 +1,90 @@
+\documentclass[12pt, letterpaper, twoside]{article}
+\usepackage[utf8]{inputenc}
+
+\title{Proof Map}
+\author{Wafer Li}
+\date{Apirl 2017}
+
+\begin{document}
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+The proof of the property of the Collection method map:
+
+$$
+\left( xs ++ ys \right) \ map \ f = \left (xs \ map \ f \right) ++ \left(ys \ map \ f \right)
+$$
+
+\section{Base Case}
+
+let $xs = Nil$, then the equation need to be proof will become:
+
+$$
+\left ( Nil ++ ys \right) \ map \ f = \left ( Nil \ map \ f) ++ \left(ys \ map \ f \right)
+$$
+
+Then by using the 1st law of ++, the left-side will become:
+
+$$
+\begin{aligned}
+\left ( Nil ++ ys \right ) \ map \ f \\
+&= ys \ map \ f
+\end{aligned}
+$$
+
+By using the 1st law of ++, the right-side will become:
+
+$$
+\begin{aligned}
+\left( Nil \ map \ f \right) ++ \left( ys \ map \ f \right) \\
+&= Nil ++ ys \ map \f \\
+&= ys \ map \ f
+\end{aligned}
+$$
+
+And the Base Case is proved.
+
+\section{Inductive Case}
+
+In this case, the equation needs to be proved will become:
+
+$$
+\begin{aligned}
+\left( x\ ::\ xs \right) ++ ys \ map \ f = \\
+\left( \left( x\ ::\ xs \right) \ map \f \right) ++ \left( ys\ map\ f \right)
+\end{aligned}
+$$
+
+\subsection{Left Side}
+
+The left-side will become:
+
+$$
+\begin{aligned}
+\left(x\ ::\ xs \right) ++ \left(ys\ map \ f \right) \\
+&= x\ ::\ \left(\left(xs ++ ys\right)\ map \ f \right)
+\end{aligned}
+$$
+
+\subsection{Right Side}
+
+The right-side will become:
+
+$$
+\begin{aligned}
+\left( \left( x \ :: \ xs \right) \ map \ f \right) ++ \left( ys \ map \ f \right) \\
+&= \left(x \ :: \ \left( xs \ map \ f \right)\right) ++ \left(ys \ map \ f \rigth) \\
+&= x \ :: \ \left( \left(xs \ map \ f \right) ++ \left(ys \ map \ f \right) \right) \\
+&= x \ :: \ \left(\left(xs ++ ys\right) \ map \ f \right)
+\end{aligned}
+$$
+
+Then the induction part is proved
+
+\section{Conclution}
+
+The Base Case and the Inductive Case are proved; the equation is proved.
+
+\end{document}
